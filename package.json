@@ -1,0 +1,22 @@
+{
+  "name": "discord-quest-helper",
+  "version": "2.0.0",
+  "description": "Discord Quest Completer - Improved for high-value quests",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "build:web": "node scripts/build-web.js",
+    "cap:sync": "npx cap sync android",
+    "build:apk": "cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/cli": "^6.1.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {},
+  "keywords": ["discord", "quest", "orbs"],
+  "author": "QuestHelper",
+  "license": "MIT"
+}

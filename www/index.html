@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0c16">
+<title>Quest Orbs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="logo">
+      <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+        <defs><radialGradient id="g" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#9ff3ff"/><stop offset=".45" stop-color="#6c7bff"/><stop offset="1" stop-color="#a86bff"/></radialGradient></defs>
+        <circle cx="24" cy="24" r="21" fill="url(#g)"/>
+        <ellipse cx="17" cy="15" rx="7" ry="4" fill="#fff" opacity=".35" transform="rotate(-30 17 15)"/>
+      </svg>
+    </div>
+    <div class="ttl"><h1>Quest Orbs</h1><p>خلّص كويستات ديسكورد واجمع الـ Orbs</p></div>
+    <button id="switchBtn" class="ghost hide" type="button">تبديل الحساب</button>
+  </header>
+
+  <!-- ============ LOGIN ============ -->
+  <section id="loginView">
+    <div class="card">
+      <div class="sec">الحسابات المحفوظة <span id="savedCount" class="dim"></span></div>
+      <div id="saved" class="saved"></div>
+
+      <label class="lbl" for="tok">التوكن</label>
+      <div class="field">
+        <input id="tok" type="password" dir="ltr" placeholder="الصق التوكن هنا" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
+        <button id="eye" class="icon" type="button" aria-label="إظهار">👁</button>
+        <button id="paste" class="icon txt" type="button">لصق</button>
+      </div>
+      <div id="loginErr" class="err hide"></div>
+      <button id="loginBtn" class="primary wide" type="button">دخول</button>
+      <p class="note">التوكن بيتخزّن على موبايلك بس وبيتبعت لديسكورد بس. استخدام الأتمتة على حسابك ممكن يعرّضه للحظر - على مسؤوليتك.</p>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD ============ -->
+  <section id="dashView" class="hide">
+    <div id="profile" class="card profile"></div>
+    <div id="stats" class="stats"></div>
+
+    <div class="qhead">
+      <h2>الكويستات المتاحة <span id="qcount" class="dim"></span></h2>
+      <button id="refresh" class="icon" type="button" aria-label="تحديث">⟳</button>
+    </div>
+    <div class="tools">
+      <div class="seg">
+        <button id="fAll" class="on" type="button">الكل</button>
+        <button id="fOrbs" type="button">Orbs</button>
+      </div>
+      <button id="runAll" class="primary sm" type="button">▶ شغّل الكل</button>
+      <button id="stopAll" class="danger sm" type="button">■ إيقاف الكل</button>
+    </div>
+    <p class="tip">نصيحة: الفيديو بيخلص أسرع لو الكويست متسجّل من بدري. اللي لسه ما اشتركتش فيه بياخد وقته الحقيقي. سيب الشاشة شغّالة أثناء التشغيل. كويستات "لعب على الديسكتوب" بتحتاج اتصال Gateway منفصل وأبطأ شوية في البداية - ده طبيعي.</p>
+
+    <div id="quests"></div>
+
+    <details class="card logbox"><summary>السجل</summary><pre id="log" dir="ltr"></pre></details>
+  </section>
+
+</div>
+<div id="toast" class="toast"></div>
+<script src="gateway.js"></script>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

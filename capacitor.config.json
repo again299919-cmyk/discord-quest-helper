@@ -1,0 +1,11 @@
+{
+  "appId": "com.questhelper.app",
+  "appName": "Quest Helper",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}
